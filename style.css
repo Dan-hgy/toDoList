@@ -232,6 +232,9 @@ h1 {
 
     .taskList {
         width: 760px;
+    }
 
+    .footer {
+        width: 760px;
     }
 }

@@ -229,4 +229,9 @@ h1 {
     .filterSection {
         justify-content: center;
     }
+
+    .taskList {
+        width: 760px;
+
+    }
 }

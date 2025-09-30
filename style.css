@@ -211,10 +211,10 @@ h1 {
 }
 
 /* mobile styles */
-@media (max-width: 768px) {
+@media (max-width: 567px) {
 
     .taskManager {
-        width: 700px;
+        width: 565px;
     }
 
     .taskManager {
@@ -231,10 +231,10 @@ h1 {
     }
 
     .taskList {
-        width: 760px;
+        width: 565px;
     }
 
     .footer {
-        width: 760px;
+        width: 565px;
     }
 }

@@ -212,9 +212,9 @@ h1 {
 
 /* mobile styles */
 @media (max-width: 768px) {
-    main {
-        margin: 0;
-        padding: 0;
+
+    .taskManager {
+        width: 700px;
     }
 
     .taskManager {

@@ -20,7 +20,7 @@ main {
 }
 
 /* heading,input and button styles */
-h1 {
+/* h1 {
     color: black;
     text-align: left;
     margin: 2rem 10rem;
@@ -88,6 +88,48 @@ h1 {
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
+} */
+h1 {
+    color: black;
+    text-align: center;
+    margin: 2rem 1rem;
+}
+
+.taskManager {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.inputSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.inputSection #taskDes,
+.inputSection #Date {
+    height: auto;
+    padding: 0.8rem;
+    font-size: 1rem;
+}
+
+.inputSection .addTask {
+    height: 3rem;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.filterSection,
+.sortSection {
+    display: flex;
+    gap: 1rem;
 }
 
 /* task item styles */
@@ -211,12 +253,7 @@ h1 {
 }
 
 /* mobile styles */
-@media (max-width: 567px) {
-
-    .taskManager {
-        width: 565px;
-    }
-
+@media (max-width: 576px) {
     .taskManager {
         padding: 0 1rem;
     }
@@ -226,15 +263,14 @@ h1 {
         align-items: stretch;
     }
 
+    .inputSection #taskDes,
+    .inputSection #Date {
+        height: auto;
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
     .filterSection {
         justify-content: center;
-    }
-
-    .taskList {
-        width: 565px;
-    }
-
-    .footer {
-        width: 565px;
     }
 }

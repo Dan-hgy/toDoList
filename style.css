@@ -1,0 +1,227 @@
+/* style reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body styles */
+body {
+    font-family: 'Inter', 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* main container style */
+main {
+    flex-grow: 1;
+}
+
+/* heading,input and button styles */
+h1 {
+    color: black;
+    text-align: left;
+    margin: 2rem 10rem;
+}
+
+.taskManager {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.inputSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: left;
+    align-items: center;
+    margin: 2rem 10rem;
+}
+
+.inputSection #taskDes {
+    width: 25rem;
+    height: 3rem;
+    border-radius: 10px;
+}
+
+.inputSection #Date {
+    margin-top: 1rem;
+    width: 25rem;
+    height: 3rem;
+    border-radius: 10px;
+    grid-row: 2 / 3;
+}
+
+.inputSection .addTask {
+    margin-top: 1rem;
+    width: 10rem;
+    height: 3rem;
+    cursor: pointer;
+    grid-row: 2;
+    grid-column: 2;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.filterSection {
+    grid-row: 2;
+    display: flex;
+    justify-content: left;
+    margin: 2rem 10rem;
+    gap: 2rem;
+}
+
+.sortSection {
+    grid-row: 3;
+    grid-column: 1;
+    display: flex;
+    justify-content: left;
+}
+
+.sortSection .sortByDate {
+    margin-left: 10rem;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* task item styles */
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 16px;
+    margin: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 5px solid #3498db;
+}
+
+.taskItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.taskContent {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.taskText {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.dueDate {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+}
+
+.taskItem.completed {
+    border-left-color: #2ecc71;
+    background-color: #f8f9fa;
+    opacity: 0.8;
+}
+
+.taskItem.completed .taskText {
+    text-decoration: line-through;
+    color: #95a5a6;
+}
+
+.taskActions button {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-left: 8px;
+    padding: 5px;
+    transition: transform 0.2s ease;
+}
+
+.taskActions button:hover {
+    transform: scale(1.2);
+}
+
+.completeBtn:hover {
+    color: #2ecc71;
+}
+
+.deleteBtn:hover {
+    color: #e74c3c;
+}
+
+/* control button styles */
+.controlBtn {
+    width: 8rem;
+    height: 3rem;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    color: #343a40;
+    background-color: #f1f3f5;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.controlBtn:hover {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+}
+
+.controlBtn.active-filter {
+    background-color: #20c997;
+    color: #ffffff;
+    border-color: #20c997;
+}
+
+/* main button styles */
+.addTask {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #20c997;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addTask:hover {
+    background-color: #1baa80;
+}
+
+/* footer styles */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #e9ecef;
+    color: #6c757d;
+}
+
+/* mobile styles */
+@media (max-width: 768px) {
+    .taskManager {
+        padding: 0 1rem;
+    }
+
+    .inputSection {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filterSection {
+        justify-content: center;
+    }
+}
